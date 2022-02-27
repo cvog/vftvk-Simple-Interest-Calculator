@@ -1,4 +1,37 @@
-body {background-color:tan;}
-h1{color:green;}
-
-
+body {
+    background-color:black;
+    font-family: sans-serif;
+}
+.box-centered {
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40em;
+    padding: 2em;
+    background-color: white;
+}
+.row {
+    display: flex;
+    padding-left: 6em;
+    padding-right: 6em;
+}
+.column-left {
+    flex: 35%;
+    padding: 0.5em;
+}
+.column-right {
+     flex: 60%;
+     padding: 0.5em;
+ }
+.rate-text {
+    vertical-align: top;
+}
+h1{
+    color:gray;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3em;
+}
+.highlight {
+    background-color: yellow;
+}
