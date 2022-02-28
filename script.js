@@ -15,6 +15,7 @@ function compute() {
 
     if (!isPositiveInteger(principal)) {
         alert("Please enter a positive integer as principal!");
+        document.getElementById("principal").focus();
     }
 
     let resultText = document.getElementById("result");
