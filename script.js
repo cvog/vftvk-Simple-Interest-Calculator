@@ -13,6 +13,10 @@ function compute() {
     let years = document.getElementById("years").value;
     let targetYear = parseInt(new Date().getFullYear()) + parseInt(years);
 
+    if (!isPositiveInteger(principal)) {
+        alert("Please enter a positive integer as principal!");
+    }
+
     let resultText = document.getElementById("result");
     resultText.innerHTML = "If you deposit <span class=\"highlight\">"
         +principal+"</span>,<br/>";
@@ -26,4 +30,14 @@ function compute() {
 
 var calculateInterest = function (principal, years, rate) {
     return (principal*rate*years/100);
+}
+
+function isPositiveInteger(str) {
+    str = str.trim();
+    if (!str) {
+        return false;
+    }
+    str = str.replace(/^0+/, "") || "0";
+    var n = Math.floor(Number(str));
+    return n !== Infinity && String(n) === str && n > 0;
 }
